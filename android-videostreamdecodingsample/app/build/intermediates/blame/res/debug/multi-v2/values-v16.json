@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/lorenzocausa/.gradle/caches/transforms-2/files-2.1/891c196e11db1d37f613ac4cf9ef7423/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/lorenzocausa/.gradle/caches/transforms-2/files-2.1/6b8bf7a866b8fe9cf8be0f597969cd69/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

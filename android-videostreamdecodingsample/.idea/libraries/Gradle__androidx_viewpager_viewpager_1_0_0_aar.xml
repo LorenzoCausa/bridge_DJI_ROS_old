@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.viewpager:viewpager:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d2362ecf7c63262238c1f991b9e65b4a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d2362ecf7c63262238c1f991b9e65b4a/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d2362ecf7c63262238c1f991b9e65b4a/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9739d0c25266a8046cc9ac8c2a4a98f1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9739d0c25266a8046cc9ac8c2a4a98f1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9739d0c25266a8046cc9ac8c2a4a98f1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8b868d60c906ebb490112d3042e0e49c/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8b868d60c906ebb490112d3042e0e49c/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8b868d60c906ebb490112d3042e0e49c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/18bf2ffa938082c0807e177ff51310ee/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/5aed98e1a7bd35d26e6b7e123a4f58e5/transformed/viewpager-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5aed98e1a7bd35d26e6b7e123a4f58e5/transformed/viewpager-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5aed98e1a7bd35d26e6b7e123a4f58e5/transformed/viewpager-1.0.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.viewpager/viewpager/1.0.0/db045f92188b9d247d5f556866f8861ab68528f0/viewpager-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

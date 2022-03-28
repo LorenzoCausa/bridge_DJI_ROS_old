@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/home/lorenzocausa/.gradle/caches/transforms-3/3e6c60d4601f6d856c57ee54ee36e443/transformed/appcompat-1.0.0/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

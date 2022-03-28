@@ -1,0 +1,2 @@
+# Referenced at /home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml:64
+-keep class com.dji.videostreamdecodingsample.VideoDecodingApplication { <init>(...); }
