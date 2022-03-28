@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+            "outputFile": "/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xxhdpi-v4/values-xxhdpi-v4.xml",
             "map": [
                 {
                     "source": "/home/lorenzocausa/.gradle/caches/transforms-3/4d127a7df870f1424b3f918119a07b0c/transformed/jetified-dji-sdk-4.14-trial1/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",

@@ -1,44 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
-                {
-                    "source": "/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1,4,5,3,6,2",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "16,243,317,175,385,98",
-                        "endColumns": "81,73,67,67,61,76",
-                        "endOffsets": "93,312,380,238,442,170"
-                    },
-                    "to": {
-                        "startLines": "746,750,1314,1655,1658,1711",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "34678,34926,101142,134511,134747,139381",
-                        "endColumns": "81,73,67,67,61,76",
-                        "endOffsets": "34755,34995,101205,134574,134804,139453"
-                    }
-                },
-                {
-                    "source": "/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "54",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "368"
-                    },
-                    "to": {
-                        "startLines": "1760",
-                        "startColumns": "4",
-                        "startOffsets": "142757",
-                        "endLines": "1765",
-                        "endColumns": "12",
-                        "endOffsets": "143071"
-                    }
-                },
                 {
                     "source": "/home/lorenzocausa/.gradle/caches/transforms-3/2e57b8fb71f4a475f9f21d587a549e7c/transformed/coordinatorlayout-1.0.0/res/values/values.xml",
                     "from": {
@@ -56,23 +20,6 @@
                         "endLines": "348,3252,3974,4063",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "10834,243472,288231,293442"
-                    }
-                },
-                {
-                    "source": "/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "4,7,6,2,3,8,5",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "153,288,244,55,102,333,199",
-                        "endColumns": "45,44,43,46,50,44,44",
-                        "endOffsets": "194,328,283,97,148,373,239"
-                    },
-                    "to": {
-                        "startLines": "486,487,488,489,490,491,535",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "17818,17864,17909,17953,18000,18051,20921",
-                        "endColumns": "45,44,43,46,50,44,44",
-                        "endOffsets": "17859,17904,17948,17995,18046,18091,20961"
                     }
                 },
                 {
@@ -114,6 +61,23 @@
                     }
                 },
                 {
+                    "source": "/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "4,7,6,2,3,8,5",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "153,288,244,55,102,333,199",
+                        "endColumns": "45,44,43,46,50,44,44",
+                        "endOffsets": "194,328,283,97,148,373,239"
+                    },
+                    "to": {
+                        "startLines": "486,487,488,489,490,491,535",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "17818,17864,17909,17953,18000,18051,20921",
+                        "endColumns": "45,44,43,46,50,44,44",
+                        "endOffsets": "17859,17904,17948,17995,18046,18091,20961"
+                    }
+                },
+                {
                     "source": "/home/lorenzocausa/.gradle/caches/transforms-3/ceb07c40049be9b04e5fcf0e6bf0d960/transformed/jetified-lost-3.0.4/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4",
@@ -152,7 +116,26 @@
                     }
                 },
                 {
-                    "source": "/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/res/values/dimens.xml",
+                    "source": "/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "54",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "368"
+                    },
+                    "to": {
+                        "startLines": "1760",
+                        "startColumns": "4",
+                        "startOffsets": "142757",
+                        "endLines": "1765",
+                        "endColumns": "12",
+                        "endOffsets": "143071"
+                    }
+                },
+                {
+                    "source": "/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/res/values/dimens.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -166,6 +149,23 @@
                         "startOffsets": "26810,26868",
                         "endColumns": "57,55",
                         "endOffsets": "26863,26919"
+                    }
+                },
+                {
+                    "source": "/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1,4,5,3,6,2",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "16,243,317,175,385,98",
+                        "endColumns": "81,73,67,67,61,76",
+                        "endOffsets": "93,312,380,238,442,170"
+                    },
+                    "to": {
+                        "startLines": "746,750,1314,1655,1658,1711",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "34678,34926,101142,134511,134747,139381",
+                        "endColumns": "81,73,67,67,61,76",
+                        "endOffsets": "34755,34995,101205,134574,134804,139453"
                     }
                 },
                 {

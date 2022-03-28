@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml",
+            "outputFile": "/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml",
             "map": [
                 {
                     "source": "/home/lorenzocausa/.gradle/caches/transforms-3/7b11811bee1755794062dd9be1ec36fd/transformed/core-1.0.0/res/values-sq/values-sq.xml",

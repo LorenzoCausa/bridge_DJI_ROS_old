@@ -795,10 +795,26 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
             byte[] bmp = byteArrayOutputStream.toByteArray();
 
             // convert to Bitmap and scale the image
-            Bitmap bitmap = getScaledImage(bmp, width, height, 2);
+            Bitmap bitmap = getScaledImage(bmp, width, height, 1);
 
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 15, bos);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 75, bos);
+
+            //UDP limit is 64kb
+            if(bos.size()>60000){
+                bos.reset();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 50, bos);
+            }
+            if(bos.size()>60000){
+                bos.reset();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 25, bos);
+            }
+            if(bos.size()>60000){
+                bos.reset();
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 10, bos);
+            }
+
+
             byte[] byteArray = bos.toByteArray();
             SocketClient socketClient = new SocketClient();
             socketClient.execute(byteArray, ip_address);

@@ -4,74 +4,74 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="19"
-6-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml
+6-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="29" />
-7-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml
+7-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml
 8
 9    <uses-permission android:name="android.permission.VIBRATE" />
-9-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:5:5-65
-9-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:5:22-63
+9-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:5:5-65
+9-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:5:22-63
 10    <uses-permission android:name="android.permission.INTERNET" />
-10-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:6:5-66
-10-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:6:22-64
+10-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:6:5-66
+10-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:6:22-64
 11    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-11-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:7:5-75
-11-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:7:22-73
+11-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:7:5-75
+11-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:7:22-73
 12    <uses-permission android:name="android.permission.WAKE_LOCK" />
-12-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:8:5-67
-12-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:8:22-65
+12-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:8:5-67
+12-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:8:22-65
 13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:9:5-80
-13-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:9:22-78
+13-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:9:5-80
+13-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:9:22-78
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:10:5-78
-14-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:10:22-76
+14-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:10:5-78
+14-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:10:22-76
 15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-15-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:11:5-78
-15-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:11:22-76
+15-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:11:5-78
+15-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:11:22-76
 16    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-16-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:12:5-75
-16-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:12:22-73
+16-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:12:5-75
+16-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:12:22-73
 17    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-17-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:13:5-83
-17-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:13:22-81
+17-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:13:5-83
+17-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:13:22-81
 18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-18-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:14:5-80
-18-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:14:22-78
+18-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:14:5-80
+18-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:14:22-78
 19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-19-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:15:5-79
-19-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:15:22-77
+19-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:15:5-79
+19-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:15:22-77
 20    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-20-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:16:5-77
-20-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:16:22-75
+20-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:16:5-77
+20-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:16:22-75
 21    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-21-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:17:5-74
-21-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:17:22-72
+21-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:17:5-74
+21-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:17:22-72
 22    <uses-permission android:name="android.permission.BLUETOOTH" />
-22-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:18:5-67
-22-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:18:22-65
+22-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:18:5-67
+22-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:18:22-65
 23    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-23-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:19:5-74
-23-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:19:22-71
+23-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:19:5-74
+23-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:19:22-71
 24
 25    <uses-feature android:name="android.hardware.camera" />
-25-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:21:5-59
-25-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:21:19-57
+25-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:21:5-59
+25-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:21:19-57
 26    <uses-feature android:name="android.hardware.camera.autofocus" />
-26-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:22:5-69
-26-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:22:19-67
+26-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:22:5-69
+26-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:22:19-67
 27    <uses-feature
-27-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:23:5-25:35
+27-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:23:5-25:35
 28        android:name="android.hardware.usb.host"
-28-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:24:9-49
+28-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:24:9-49
 29        android:required="false" />
-29-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:25:9-33
+29-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:25:9-33
 30    <uses-feature
-30-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:26:5-28:34
+30-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:26:5-28:34
 31        android:name="android.hardware.usb.accessory"
-31-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:27:9-54
+31-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:27:9-54
 32        android:required="true" />
-32-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:28:9-32
+32-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:28:9-32
 33
 34    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 34-->[com.dji:dji-sdk:4.14-trial1] /home/lorenzocausa/.gradle/caches/transforms-3/4d127a7df870f1424b3f918119a07b0c/transformed/jetified-dji-sdk-4.14-trial1/AndroidManifest.xml:14:5-98
@@ -149,75 +149,75 @@
 62-->[com.mapzen.android:lost:3.0.4] /home/lorenzocausa/.gradle/caches/transforms-3/ceb07c40049be9b04e5fcf0e6bf0d960/transformed/jetified-lost-3.0.4/AndroidManifest.xml:19:19-55
 63
 64    <application
-64-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:30:5-60:19
+64-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:30:5-60:19
 65        android:name="com.dji.videostreamdecodingsample.VideoDecodingApplication"
-65-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:31:9-49
+65-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:31:9-49
 66        android:allowBackup="true"
-66-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:32:9-35
+66-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:32:9-35
 67        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 67-->[androidx.core:core:1.0.0] /home/lorenzocausa/.gradle/caches/transforms-3/7b11811bee1755794062dd9be1ec36fd/transformed/core-1.0.0/AndroidManifest.xml:22:18-86
 68        android:debuggable="true"
 69        android:label="@string/app_name_decoding_sample"
-69-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:33:9-57
+69-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:33:9-57
 70        android:supportsRtl="true"
-70-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:34:9-35
+70-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:34:9-35
 71        android:testOnly="true"
 72        android:theme="@style/AppTheme" >
-72-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:35:9-40
+72-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:35:9-40
 73        <uses-library
-73-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:37:9-88
+73-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:37:9-88
 74            android:name="org.apache.http.legacy"
-74-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:37:23-60
+74-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:37:23-60
 75            android:required="false" />
-75-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:37:61-85
+75-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:37:61-85
 76
 77        <meta-data
-77-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:39:9-41:55
+77-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:39:9-41:55
 78            android:name="com.dji.sdk.API_KEY"
-78-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:40:13-47
+78-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:40:13-47
 79            android:value="5b0dc0881aa3865e187852a2" />
-79-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:41:13-53
+79-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:41:13-53
 80
 81        <activity
-81-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:43:9-55:20
+81-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:43:9-55:20
 82            android:name="com.dji.videostreamdecodingsample.ConnectionActivity"
-82-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:44:13-47
+82-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:44:13-47
 83            android:launchMode="singleTop"
-83-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:45:13-43
+83-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:45:13-43
 84            android:screenOrientation="portrait" >
-84-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:46:13-49
+84-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:46:13-49
 85            <intent-filter>
-85-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:47:13-51:29
+85-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:47:13-51:29
 86                <action android:name="android.intent.action.MAIN" />
-86-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:48:17-68
-86-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:48:25-66
+86-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:48:17-68
+86-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:48:25-66
 87
 88                <category android:name="android.intent.category.LAUNCHER" />
-88-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:49:17-76
-88-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:49:27-74
+88-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:49:17-76
+88-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:49:27-74
 89
 90                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
-90-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:50:17-92
-90-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:50:25-90
+90-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:50:17-92
+90-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:50:25-90
 91            </intent-filter>
 92
 93            <meta-data
-93-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:52:13-54:59
+93-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:52:13-54:59
 94                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
-94-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:53:17-82
+94-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:53:17-82
 95                android:resource="@xml/accessory_filter" />
-95-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:54:17-57
+95-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:54:17-57
 96        </activity>
 97        <activity
-97-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:56:9-59:83
+97-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:56:9-59:83
 98            android:name="com.dji.videostreamdecodingsample.MainActivity"
-98-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:56:19-47
+98-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:56:19-47
 99            android:configChanges="orientation|screenSize"
-99-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:58:13-59
+99-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:58:13-59
 100            android:screenOrientation="sensorLandscape"
-100-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:57:13-56
+100-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:57:13-56
 101            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-101-->/home/lorenzocausa/Desktop/GP_App/videodrone2/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:59:13-71
+101-->/home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/src/main/AndroidManifest.xml:59:13-71
 102
 103        <service
 103-->[com.dji:dji-sdk:4.14-trial1] /home/lorenzocausa/.gradle/caches/transforms-3/4d127a7df870f1424b3f918119a07b0c/transformed/jetified-dji-sdk-4.14-trial1/AndroidManifest.xml:59:9-61:43

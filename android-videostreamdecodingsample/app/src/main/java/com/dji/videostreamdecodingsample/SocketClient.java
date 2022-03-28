@@ -1,43 +1,42 @@
 package com.dji.videostreamdecodingsample;
 
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
-import android.widget.ImageView;
 
-import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.net.Socket;
+import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 
 public class SocketClient extends AsyncTask<byte[], Void, Void> {
-    Socket s;
-    DataOutputStream dos;
-    PrintWriter pw;
-    private static final int SERVERPORT = 8888;
-
     @Override
     protected Void doInBackground(byte[]... voids) {
-
-        byte[] array = voids[0];
+        byte[] buf = voids[0];
         byte[] ip = voids[1];
+        DatagramSocket socket;
+        InetAddress address;
         String ip_address = new String(ip, StandardCharsets.UTF_8); // for UTF-8 encoding
-
         try {
-            s = new Socket(ip_address, 8888);
-            //s = new Socket("192.168.1.91", 8888);
-
-            OutputStream out = s.getOutputStream();
-            DataOutputStream dos = new DataOutputStream(out);
-            dos.writeInt(array.length);
-            dos.write(array, 0, array.length);
-            dos.flush();
-            dos.close();
-            s.close();
-
+            socket = new DatagramSocket();
+        } catch (SocketException e) {
+            e.printStackTrace();
+            socket = null;
+        }
+        try {
+            address = InetAddress.getByName(ip_address);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+            address = null;
+        }
+        DatagramPacket packet = new DatagramPacket(buf, buf.length, address, 8888);
+        try {
+            socket.send(packet);
         } catch (IOException e) {
             e.printStackTrace();
         }
