@@ -814,7 +814,6 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 10, bos);
             }
 
-
             byte[] byteArray = bos.toByteArray();
             SocketClient socketClient = new SocketClient();
             socketClient.execute(byteArray, ip_address);
@@ -973,43 +972,44 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                     msg = buffer.readLine();
                     jObj = new JSONObject(msg);
 
-                    //We store the target position coordinates into two different variables
-                    targetX = (float) jObj.getDouble("target_x");
-                    targetY = (float) jObj.getDouble("target_y");
+                    //We store the target position coordinates into different variables
+                    mYaw = (float) jObj.getDouble("yaw");
+                    mPitch = (float) jObj.getDouble("pitch");
+                    mRoll = (float) jObj.getDouble("roll");
+                    mThrottle =  (float) jObj.getDouble("throttle");
+
+                    boolean virtualStickModeActive = mFlightController.isVirtualStickControlModeAvailable();
 
                     //add textview here
-                    String stringTv = "targetx = " + String.valueOf(targetX) + "    targety= " + String.valueOf(targetY);
-                    target_tv.setText(stringTv);
+                    //String stringTv ="VCM active: " + virtualStickModeActive + " yaw: " + String.valueOf(mYaw) + " pitch: " + String.valueOf(mPitch) + " roll: " + String.valueOf(mRoll) + " throttle: " + String.valueOf(mThrottle);
+                    //target_tv.setText(stringTv);
 
                     // The euclidean distance between the body frame of the drone and the target point is computed
                     // In this way is it possible to use it to compute the linear velocity along the Roll axis
                     // Pitch velocity is setted to zero
                     // We use atan2 to compute the angular velocity along the yaw axis inside computeAnguarVelocity to let the drone rotate
-                    euclideanDistance = distanceFromTargetPos(targetX, targetY);
-                    /*mPitch = 0;
-                    mRoll = (float)((1.5) *(computeLinearVelocity(euclideanDistance)));
-                    mYaw = 15 * computeAnguarVelocity(targetX, targetY);
-                    mThrottle = 0;*/
-                    mPitch = (float) ((0.5) * ((targetY) / (euclideanDistance)));
-                    mRoll = (float) ((0.5) * ((targetX) / (euclideanDistance)));
-                    mYaw = 0;
-                    mThrottle = 0;
+                    //euclideanDistance = distanceFromTargetPos(targetX, targetY);
 
-                    //Each time a new targeg position is received the velocities are sent to the FlightController
-                    if (mFlightController != null) {
+                    //mPitch = 0;
+                    //mRoll = (float)((1.5) *(computeLinearVelocity(euclideanDistance)));
+                    //mYaw = 15 * computeAnguarVelocity(targetX, targetY);
+                    //mThrottle = 0;
+                    //mPitch = (float) ((0.5) * ((targetY) / (euclideanDistance)));
+                    //mRoll = (float) ((0.5) * ((targetX) / (euclideanDistance)));
+                    //mYaw = 0;
+                    //mThrottle = 0;
+
+                    //Each time a new target position is received the velocities are sent to the FlightController
+                    FlightControlData data = new FlightControlData(mPitch, mRoll, mYaw, mThrottle);
+
+                    if (mFlightController != null & virtualStickModeActive) {
                         // metodo che manda le variabili globali (Salvate nell'oggetto FlightControlData) al mFlightController
-                        mFlightController.sendVirtualStickFlightControlData(
-                                new FlightControlData( // oggetto descritto da queste tre variabili
-                                        mPitch, mRoll, mYaw, mThrottle
-                                ), new CommonCallbacks.CompletionCallback() {
+                        mFlightController.sendVirtualStickFlightControlData(data, new CommonCallbacks.CompletionCallback() {
                                     @Override
-                                    public void onResult(DJIError djiError) {
-
-                                    }
+                                    public void onResult(DJIError djiError) {}
                                 }
                         );
                     }
-
                 }
 
             } catch (IOException | JSONException e) {
@@ -1042,6 +1042,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
             return Math.sqrt(Math.pow(targX, 2) + Math.pow(targY, 2));
         }
 
+        /*
         public void reachTarget(float targX, float targY) {
             float dist = (float) distanceFromTargetPos(targX, targY);
             float off_x = x + targX;
@@ -1072,5 +1073,6 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
             }
 
         }
+        */
     }
 }

@@ -119,6 +119,7 @@ F
 BEGIN_OBJECT
 1000
 H
+roll
 L
 O
 PKIX
@@ -742,6 +743,7 @@ $PBEWithHmacKeyFactory
 text
 Cipher.Shacal2
 Alg.Alias.Signature.SHA1WithDSA
+pitch
 KeyAgreement
 Alg.Alias.Cipher.RSA//PKCS1PADDING
 002757A1114D696E6768756151755316C05E0BD4
@@ -2436,6 +2438,7 @@ Connection
 HMACSHA384
 KeyPairGenerator.EC
 x121address
+yaw
 CertPathReviewer.signatureNotVerified
 HMACKECCAK256
 KeyFactory.DSA
@@ -2539,6 +2542,7 @@ KeyPairGenerator.Rainbow
 GET
 org.bouncycastle.jcajce.provider.keys...
 sect571r1
+throttle
 getDisplayList
 SecretKeyFactory.PBEWITHSHAAND40BITRC4
 10B51CC12849B234C75E6DD2028BF7FF5C1CE...
@@ -3214,8 +3218,6 @@ android.support.localOnly
 Lambda
 CertPathReviewer.criticalExtensionError
 2.0.1
-target_x
-target_y
 1.12
 $HashMac
 label
