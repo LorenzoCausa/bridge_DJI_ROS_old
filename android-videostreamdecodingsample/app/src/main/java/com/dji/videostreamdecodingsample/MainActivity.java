@@ -23,7 +23,6 @@ import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -36,15 +35,14 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 import dji.common.airlink.PhysicalSource;
 import dji.common.camera.SettingsDefinitions;
@@ -122,7 +120,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
     private TextureView videostreamPreviewTtView;
     private SurfaceView videostreamPreviewSf;
     private SurfaceHolder videostreamPreviewSh;
-    private Camera mCamera;
+    private List<Camera> mCameras = new ArrayList<>();
     private DJICodecManager mCodecManager;
     //private TextView savePath;
     private ToggleButton screenShot;
@@ -132,6 +130,9 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
     private int count;
     private Bitmap mBitmap;
     private byte[] ip_address;
+    private  String port="8888";
+    int thermal_visual=0;
+    private Button thermalVisualButton;
 
 
     @Override
@@ -167,7 +168,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
     @Override
     protected void onPause() {
-        if (mCamera != null) {
+        if (mCameras.get(1) != null) {
             if (VideoFeeder.getInstance().getPrimaryVideoFeed() != null) {
                 VideoFeeder.getInstance().getPrimaryVideoFeed().removeVideoDataListener(mReceivedVideoDataListener);
             }
@@ -288,6 +289,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
         mTextView = (TextView) findViewById(R.id.textview_simulator); // element to show the simulator state infos
         mSwtcEnableVirtualStick = (ToggleButton) findViewById(R.id.swtc_enable_virtual_stick); //enable/disable Virtual Control Mode
         target_tv = (TextView) findViewById(R.id.target_ttv);
+        thermalVisualButton=(Button) findViewById(R.id.mythermalVisualButton);
 
         //savePath = (TextView) findViewById(R.id.activity_main_save_path);
         screenShot = (ToggleButton) findViewById(R.id.activity_main_screen_shot);
@@ -312,6 +314,13 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                             }
                     );
                 }
+            }
+        });
+
+        thermalVisualButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                change_display();
             }
         });
 
@@ -510,16 +519,25 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
         };
 
         if (null == product || !product.isConnected()) {
-            mCamera = null;
+            mCameras = null;
             showToast("Disconnected");
         } else {
             if (!product.getModel().equals(Model.UNKNOWN_AIRCRAFT)) {
-                mCamera = product.getCamera();
-                mCamera.setMode(SettingsDefinitions.CameraMode.SHOOT_PHOTO, new CommonCallbacks.CompletionCallback() {
+                mCameras = product.getCameras();
+                mCameras.get(1).setMode(SettingsDefinitions.CameraMode.SHOOT_PHOTO, new CommonCallbacks.CompletionCallback() {
                     @Override
                     public void onResult(DJIError djiError) {
                         if (djiError != null) {
                             showToast("can't change mode of camera, error:" + djiError.getDescription());
+                        }
+                    }
+                });
+
+                mCameras.get(1).setDisplayMode(SettingsDefinitions.DisplayMode.VISUAL_ONLY,new CommonCallbacks.CompletionCallback() {
+                    @Override
+                    public void onResult(DJIError djiError) {
+                        if (djiError != null) {
+                            showToast("can't change Display mode, error:" + djiError.getDescription());
                         }
                     }
                 });
@@ -656,7 +674,8 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
     public void onYuvDataReceived(MediaFormat format, final ByteBuffer yuvFrame, int dataSize, final int width, final int height) {
         //In this demo, we test the YUV data by saving it into JPG files.
         //DJILog.d(TAG, "onYuvDataReceived " + dataSize);
-        if (count++ % 15 == 0 && yuvFrame != null) {
+
+        if (count++ % 10 == 0 && yuvFrame != null) {
             final byte[] bytes = new byte[dataSize];
             yuvFrame.get(bytes);
             //DJILog.d(TAG, "onYuvDataReceived2 " + dataSize);
@@ -684,6 +703,32 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
                 }
             });
+        }
+    }
+
+    private void change_display() {
+
+        if(thermal_visual==1){
+            mCameras.get(1).setDisplayMode(SettingsDefinitions.DisplayMode.VISUAL_ONLY,new CommonCallbacks.CompletionCallback() {
+                @Override
+                public void onResult(DJIError djiError) {
+                    if (djiError != null) {
+                        showToast("can't change Display mode in visual, error:" + djiError.getDescription());
+                    }
+                }
+            });
+            thermal_visual=0;
+        }
+        else{
+            mCameras.get(1).setDisplayMode(SettingsDefinitions.DisplayMode.THERMAL_ONLY,new CommonCallbacks.CompletionCallback() {
+                @Override
+                public void onResult(DJIError djiError) {
+                    if (djiError != null) {
+                        showToast("can't change Display mode in thermal, error:" + djiError.getDescription());
+                    }
+                }
+            });
+            thermal_visual=1;
         }
     }
 
@@ -816,13 +861,13 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
             byte[] byteArray = bos.toByteArray();
             SocketClient socketClient = new SocketClient();
-            socketClient.execute(byteArray, ip_address);
-
+            socketClient.execute(byteArray, ip_address,port.getBytes(StandardCharsets.UTF_8));
 
             byteArrayOutputStream.flush();
             byteArrayOutputStream.close();
             bos.flush();
             bos.close();
+            //change_display();
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
@@ -979,10 +1024,6 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                     mThrottle =  (float) jObj.getDouble("throttle");
 
                     boolean virtualStickModeActive = mFlightController.isVirtualStickControlModeAvailable();
-
-                    //add textview here
-                    //String stringTv ="VCM active: " + virtualStickModeActive + " yaw: " + String.valueOf(mYaw) + " pitch: " + String.valueOf(mPitch) + " roll: " + String.valueOf(mRoll) + " throttle: " + String.valueOf(mThrottle);
-                    //target_tv.setText(stringTv);
 
                     // The euclidean distance between the body frame of the drone and the target point is computed
                     // In this way is it possible to use it to compute the linear velocity along the Roll axis

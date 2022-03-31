@@ -848,6 +848,7 @@ int id main_title_rl 0x7f08006a
 int id message 0x7f08006b
 int id middle 0x7f08006c
 int id multiply 0x7f08006d
+int id mythermalVisualButton 0x7f0800cd
 int id never 0x7f08006e
 int id none 0x7f08006f
 int id normal 0x7f080070

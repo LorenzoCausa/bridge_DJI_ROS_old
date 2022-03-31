@@ -19,9 +19,14 @@ public class SocketClient extends AsyncTask<byte[], Void, Void> {
     protected Void doInBackground(byte[]... voids) {
         byte[] buf = voids[0];
         byte[] ip = voids[1];
+        byte[] port = voids[2];
+
         DatagramSocket socket;
         InetAddress address;
         String ip_address = new String(ip, StandardCharsets.UTF_8); // for UTF-8 encoding
+        String portStr = new String(port, StandardCharsets.UTF_8); // for UTF-8 encoding
+        Integer my_port = Integer.valueOf(portStr);
+
         try {
             socket = new DatagramSocket();
         } catch (SocketException e) {
@@ -34,7 +39,7 @@ public class SocketClient extends AsyncTask<byte[], Void, Void> {
             e.printStackTrace();
             address = null;
         }
-        DatagramPacket packet = new DatagramPacket(buf, buf.length, address, 8888);
+        DatagramPacket packet = new DatagramPacket(buf, buf.length, address, my_port);
         try {
             socket.send(packet);
         } catch (IOException e) {

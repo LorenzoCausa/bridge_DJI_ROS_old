@@ -127,9 +127,9 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/round_btn"
             android:text="Start Streaming"
+            android:textColor="@color/colorWhite"
             android:textOff="Start Streaming"
-            android:textOn="Stop Streaming"
-            android:textColor="@color/colorWhite" />
+            android:textOn="Stop Streaming" />
 
         <Button
             android:id="@+id/btn_land"
@@ -179,4 +179,15 @@
         android:layout_marginRight="300dp"
         android:layout_marginBottom="673dp"
         android:text="TextView" />
+
+    <Button
+        android:id="@+id/mythermalVisualButton"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="600dp"
+        android:layout_marginBottom="26dp"
+        android:text="Visual/Thermal" />
+
 </RelativeLayout>

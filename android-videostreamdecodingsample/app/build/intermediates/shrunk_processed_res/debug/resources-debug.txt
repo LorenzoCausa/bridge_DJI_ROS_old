@@ -1,11 +1,11 @@
 Marking id:btn_take_off:2131230765 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:btn_land:2131230761 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:btn_start_simulator:2131230764 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking id:textview_simulator:2131230896 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking id:swtc_enable_virtual_stick:2131230880 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking id:target_ttv:2131230885 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+Marking id:textview_ip_addr:2131230896 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+Marking id:submit_area:2131230880 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+Marking id:tag_unhandled_key_listeners:2131230885 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:activity_main_screen_shot:2131230748 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking id:title_tv:2131230901 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+Marking id:title_template:2131230901 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:livestream_preview_ttv:2131230820 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:livestream_preview_sf:2131230819 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking layout:activity_main:2131361821 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
@@ -50,16 +50,16 @@ Marking raw:iframe_896x480:2131558440 reachable: referenced from /home/lorenzoca
 Marking raw:iframe_848x480:2131558439 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking raw:iframe_640x480:2131558435 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking mipmap:joystick:2131492867 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking id:text_connection_status:2131230892 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking id:text_model_available:2131230893 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking id:text_product_info:2131230894 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking id:textview_ip_addr:2131230895 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+Marking id:textView2:2131230892 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+Marking id:text_connection_status:2131230893 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+Marking id:text_model_available:2131230894 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+Marking id:text_product_info:2131230895 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:editTextIP:2131230788 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:btn_open:2131230762 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:enable_android_bridge:2131230791 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:edittext_bridge_ip_addr:2131230790 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:btn_set_andr_bridge:2131230763 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking id:textView2:2131230891 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
+Marking id:textView:2131230891 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking string:sdk_version:2131624888 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking layout:activity_connection:2131361820 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking string:product_information:2131624885 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
@@ -1899,6 +1899,7 @@ Skein
 freeze
 $TLS12withSHA512
 RSA/PKCS1
+8888
 drawable
 ACTION_NEXT_HTML_ELEMENT
 SHA224WITHECDDSA
@@ -4092,12 +4093,12 @@ org.bouncycastle.jcajce.provider.asym...
 category
 HMacSHA512
 Marking id:left:2131230814 used because it matches string pool constant left
-Marking id:top:2131230902 used because it matches string pool constant top
-Marking id:topPanel:2131230903 used because it matches string pool constant top
-Marking id:start:2131230877 used because it matches string pool constant start
-Marking id:right:2131230846 used because it matches string pool constant right
-Marking id:right_icon:2131230847 used because it matches string pool constant right
-Marking id:right_side:2131230848 used because it matches string pool constant right
+Marking id:top:2131230903 used because it matches string pool constant top
+Marking id:topPanel:2131230904 used because it matches string pool constant top
+Marking id:start:2131230878 used because it matches string pool constant start
+Marking id:right:2131230847 used because it matches string pool constant right
+Marking id:right_icon:2131230848 used because it matches string pool constant right
+Marking id:right_side:2131230849 used because it matches string pool constant right
 Marking attr:title:2130903351 used because it matches string pool constant title
 Marking attr:titleMargin:2130903352 used because it matches string pool constant title
 Marking attr:titleMarginBottom:2130903353 used because it matches string pool constant title
@@ -4109,10 +4110,10 @@ Marking attr:titleTextAppearance:2130903358 used because it matches string pool 
 Marking attr:titleTextColor:2130903359 used because it matches string pool constant title
 Marking attr:titleTextStyle:2130903360 used because it matches string pool constant title
 Marking color:title_dark:2131034201 used because it matches string pool constant title
-Marking id:title:2131230898 used because it matches string pool constant title
-Marking id:titleDividerNoCustom:2131230899 used because it matches string pool constant title
-Marking id:title_template:2131230900 used because it matches string pool constant title
-Marking id:title_tv:2131230901 used because it matches string pool constant title
+Marking id:title:2131230899 used because it matches string pool constant title
+Marking id:titleDividerNoCustom:2131230900 used because it matches string pool constant title
+Marking id:title_template:2131230901 used because it matches string pool constant title
+Marking id:title_tv:2131230902 used because it matches string pool constant title
 Marking string:title_main_activity:2131624939 used because it matches string pool constant title
 Marking attr:textAllCaps:2130903330 used because it matches string pool constant text
 Marking attr:textAppearanceLargePopupMenu:2130903331 used because it matches string pool constant text
@@ -4125,17 +4126,17 @@ Marking attr:textAppearanceSearchResultTitle:2130903337 used because it matches 
 Marking attr:textAppearanceSmallPopupMenu:2130903338 used because it matches string pool constant text
 Marking attr:textColorAlertDialogListItem:2130903339 used because it matches string pool constant text
 Marking attr:textColorSearchUrl:2130903340 used because it matches string pool constant text
-Marking id:text:2131230886 used because it matches string pool constant text
-Marking id:text2:2131230887 used because it matches string pool constant text
-Marking id:textSpacerNoButtons:2131230888 used because it matches string pool constant text
-Marking id:textSpacerNoTitle:2131230889 used because it matches string pool constant text
-Marking id:textView:2131230890 used because it matches string pool constant text
-Marking id:textView2:2131230891 used because it matches string pool constant text
-Marking id:text_connection_status:2131230892 used because it matches string pool constant text
-Marking id:text_model_available:2131230893 used because it matches string pool constant text
-Marking id:text_product_info:2131230894 used because it matches string pool constant text
-Marking id:textview_ip_addr:2131230895 used because it matches string pool constant text
-Marking id:textview_simulator:2131230896 used because it matches string pool constant text
+Marking id:text:2131230887 used because it matches string pool constant text
+Marking id:text2:2131230888 used because it matches string pool constant text
+Marking id:textSpacerNoButtons:2131230889 used because it matches string pool constant text
+Marking id:textSpacerNoTitle:2131230890 used because it matches string pool constant text
+Marking id:textView:2131230891 used because it matches string pool constant text
+Marking id:textView2:2131230892 used because it matches string pool constant text
+Marking id:text_connection_status:2131230893 used because it matches string pool constant text
+Marking id:text_model_available:2131230894 used because it matches string pool constant text
+Marking id:text_product_info:2131230895 used because it matches string pool constant text
+Marking id:textview_ip_addr:2131230896 used because it matches string pool constant text
+Marking id:textview_simulator:2131230897 used because it matches string pool constant text
 Marking attr:statusBarBackground:2130903318 used because it matches string pool constant status
 Marking integer:status_bar_notification_info_maxnum:2131296260 used because it matches string pool constant status
 Marking string:status_bar_notification_info_overflow:2131624897 used because it matches string pool constant status
@@ -4151,8 +4152,8 @@ Marking color:background_material_light:2131034141 used because it matches strin
 Marking id:CTRL:2131230722 used because it matches string pool constant CTR
 Marking attr:progressBarPadding:2130903290 used because it matches string pool constant progress
 Marking attr:progressBarStyle:2130903291 used because it matches string pool constant progress
-Marking id:progress_circular:2131230841 used because it matches string pool constant progress
-Marking id:progress_horizontal:2131230842 used because it matches string pool constant progress
+Marking id:progress_circular:2131230842 used because it matches string pool constant progress
+Marking id:progress_horizontal:2131230843 used because it matches string pool constant progress
 Marking id:end:2131230792 used because it matches string pool constant end
 Marking color:error_color_material_dark:2131034160 used because it matches string pool constant err
 Marking color:error_color_material_light:2131034161 used because it matches string pool constant err
@@ -4195,9 +4196,9 @@ Marking drawable:notification_icon_background:2131165293 used because it matches
 Marking drawable:notification_template_icon_bg:2131165294 used because it matches string pool constant notification
 Marking drawable:notification_template_icon_low_bg:2131165295 used because it matches string pool constant notification
 Marking drawable:notification_tile_bg:2131165296 used because it matches string pool constant notification
-Marking id:notification_background:2131230833 used because it matches string pool constant notification
-Marking id:notification_main_column:2131230834 used because it matches string pool constant notification
-Marking id:notification_main_column_container:2131230835 used because it matches string pool constant notification
+Marking id:notification_background:2131230834 used because it matches string pool constant notification
+Marking id:notification_main_column:2131230835 used because it matches string pool constant notification
+Marking id:notification_main_column_container:2131230836 used because it matches string pool constant notification
 Marking layout:notification_action:2131361824 used because it matches string pool constant notification
 Marking layout:notification_action_tombstone:2131361825 used because it matches string pool constant notification
 Marking layout:notification_template_custom_big:2131361826 used because it matches string pool constant notification
@@ -4220,16 +4221,16 @@ Marking raw:arrow_v02:2131558400 used because it matches string pool constant ar
 Marking attr:searchHintIcon:2130903299 used because it matches string pool constant search
 Marking attr:searchIcon:2130903300 used because it matches string pool constant search
 Marking attr:searchViewStyle:2130903301 used because it matches string pool constant search
-Marking id:search_badge:2131230853 used because it matches string pool constant search
-Marking id:search_bar:2131230854 used because it matches string pool constant search
-Marking id:search_button:2131230855 used because it matches string pool constant search
-Marking id:search_close_btn:2131230856 used because it matches string pool constant search
-Marking id:search_edit_frame:2131230857 used because it matches string pool constant search
-Marking id:search_go_btn:2131230858 used because it matches string pool constant search
-Marking id:search_mag_icon:2131230859 used because it matches string pool constant search
-Marking id:search_plate:2131230860 used because it matches string pool constant search
-Marking id:search_src_text:2131230861 used because it matches string pool constant search
-Marking id:search_voice_btn:2131230862 used because it matches string pool constant search
+Marking id:search_badge:2131230854 used because it matches string pool constant search
+Marking id:search_bar:2131230855 used because it matches string pool constant search
+Marking id:search_button:2131230856 used because it matches string pool constant search
+Marking id:search_close_btn:2131230857 used because it matches string pool constant search
+Marking id:search_edit_frame:2131230858 used because it matches string pool constant search
+Marking id:search_go_btn:2131230859 used because it matches string pool constant search
+Marking id:search_mag_icon:2131230860 used because it matches string pool constant search
+Marking id:search_plate:2131230861 used because it matches string pool constant search
+Marking id:search_src_text:2131230862 used because it matches string pool constant search
+Marking id:search_voice_btn:2131230863 used because it matches string pool constant search
 Marking string:search_menu_title:2131624891 used because it matches string pool constant search
 Marking attr:font:2130903170 used because it matches string pool constant font
 Marking attr:fontFamily:2130903171 used because it matches string pool constant font
@@ -4280,8 +4281,8 @@ Marking layout:activity_main:2131361821 used because it matches string pool cons
 Marking attr:stackFromEnd:2130903316 used because it matches string pool constant st
 Marking attr:state_above_anchor:2130903317 used because it matches string pool constant st
 Marking attr:statusBarBackground:2130903318 used because it matches string pool constant st
-Marking id:standard:2131230876 used because it matches string pool constant st
-Marking id:start:2131230877 used because it matches string pool constant st
+Marking id:standard:2131230877 used because it matches string pool constant st
+Marking id:start:2131230878 used because it matches string pool constant st
 Marking integer:status_bar_notification_info_maxnum:2131296260 used because it matches string pool constant st
 Marking string:status_bar_notification_info_overflow:2131624897 used because it matches string pool constant st
 Marking string:stream_observer_desc_aoa_get_body:2131624898 used because it matches string pool constant st
@@ -4332,11 +4333,11 @@ Marking attr:thumbTint:2130903344 used because it matches string pool constant t
 Marking attr:thumbTintMode:2130903345 used because it matches string pool constant th
 Marking string:v2_nfz_unlock_geo_type:2131624970 used because it matches string pool constant v2
 Marking string:v2_nfz_unlock_white_list_type:2131624971 used because it matches string pool constant v2
-Marking id:up:2131230905 used because it matches string pool constant up
-Marking id:none:2131230831 used because it matches string pool constant none
-Marking id:withText:2131230908 used because it matches string pool constant with
+Marking id:up:2131230906 used because it matches string pool constant up
+Marking id:none:2131230832 used because it matches string pool constant none
+Marking id:withText:2131230909 used because it matches string pool constant with
 Marking id:actions:2131230746 used because it matches string pool constant actions
-Marking id:time:2131230897 used because it matches string pool constant time
+Marking id:time:2131230898 used because it matches string pool constant time
 Marking id:group_divider:2131230802 used because it matches string pool constant group
 Marking id:groups:2131230803 used because it matches string pool constant group
 Marking attr:alpha:2130903079 used because it matches string pool constant alpha
@@ -4403,7 +4404,7 @@ Marking attr:allowStacking:2130903078 used because it matches string pool consta
 Marking id:all:2131230754 used because it matches string pool constant all
 Marking string:sensor_system_tip_ultrasonic_data_error_stuck:2131624892 used because it matches string pool constant sensor
 Marking attr:viewInflaterClass:2130903370 used because it matches string pool constant view
-Marking id:target_ttv:2131230885 used because it matches string pool constant target
+Marking id:target_ttv:2131230886 used because it matches string pool constant target
 Marking attr:itemPadding:2130903195 used because it matches string pool constant item
 Marking dimen:item_touch_helper_max_drag_scroll_per_frame:2131099744 used because it matches string pool constant item
 Marking dimen:item_touch_helper_swipe_escape_max_velocity:2131099745 used because it matches string pool constant item
@@ -4419,7 +4420,7 @@ Marking attr:iconTintMode:2130903189 used because it matches string pool constan
 Marking attr:iconifiedByDefault:2130903190 used because it matches string pool constant icon
 Marking id:icon:2131230806 used because it matches string pool constant icon
 Marking id:icon_group:2131230807 used because it matches string pool constant icon
-Marking id:set_sre_button:2131230864 used because it matches string pool constant set
+Marking id:set_sre_button:2131230865 used because it matches string pool constant set
 Marking string:setting_ui_flyfrb_unlock_refresh_empty:2131624893 used because it matches string pool constant set
 Marking string:setting_ui_flyfrb_unlock_refresh_fail:2131624894 used because it matches string pool constant set
 Marking string:setting_ui_flyfrb_unlock_refresh_success:2131624895 used because it matches string pool constant set
@@ -5466,6 +5467,7 @@ Marking attr:queryHint:2130903293 used because it matches string pool constant q
 @id/message : reachable=true
 @id/middle : reachable=false
 @id/multiply : reachable=false
+@id/mythermalVisualButton : reachable=false
 @id/never : reachable=false
 @id/none : reachable=true
 @id/normal : reachable=false
@@ -5516,7 +5518,7 @@ Marking attr:queryHint:2130903293 used because it matches string pool constant q
 @id/start : reachable=true
 @id/submenuarrow : reachable=true
 @id/submit_area : reachable=true
-@id/swtc_enable_virtual_stick : reachable=true
+@id/swtc_enable_virtual_stick : reachable=false
 @id/tabMode : reachable=false
 @id/tag_transition_group : reachable=true
 @id/tag_unhandled_key_event_manager : reachable=true
@@ -8891,62 +8893,61 @@ The root reachable resources are:
  id:livestream_preview_sf:2131230819
  id:livestream_preview_ttv:2131230820
  id:message:2131230827
- id:none:2131230831
- id:notification_background:2131230833
- id:notification_main_column:2131230834
- id:notification_main_column_container:2131230835
- id:parentPanel:2131230839
- id:progress_circular:2131230841
- id:progress_horizontal:2131230842
- id:right:2131230846
- id:right_icon:2131230847
- id:right_side:2131230848
- id:scrollIndicatorDown:2131230850
- id:scrollIndicatorUp:2131230851
- id:scrollView:2131230852
- id:search_badge:2131230853
- id:search_bar:2131230854
- id:search_button:2131230855
- id:search_close_btn:2131230856
- id:search_edit_frame:2131230857
- id:search_go_btn:2131230858
- id:search_mag_icon:2131230859
- id:search_plate:2131230860
- id:search_src_text:2131230861
- id:search_voice_btn:2131230862
- id:set_sre_button:2131230864
- id:shortcut:2131230865
- id:spacer:2131230869
- id:split_action_bar:2131230870
- id:standard:2131230876
- id:start:2131230877
- id:submenuarrow:2131230878
- id:submit_area:2131230879
- id:swtc_enable_virtual_stick:2131230880
- id:tag_transition_group:2131230882
- id:tag_unhandled_key_event_manager:2131230883
- id:tag_unhandled_key_listeners:2131230884
- id:target_ttv:2131230885
- id:text:2131230886
- id:text2:2131230887
- id:textSpacerNoButtons:2131230888
- id:textSpacerNoTitle:2131230889
- id:textView:2131230890
- id:textView2:2131230891
- id:text_connection_status:2131230892
- id:text_model_available:2131230893
- id:text_product_info:2131230894
- id:textview_ip_addr:2131230895
- id:textview_simulator:2131230896
- id:time:2131230897
- id:title:2131230898
- id:titleDividerNoCustom:2131230899
- id:title_template:2131230900
- id:title_tv:2131230901
- id:top:2131230902
- id:topPanel:2131230903
- id:up:2131230905
- id:withText:2131230908
+ id:none:2131230832
+ id:notification_background:2131230834
+ id:notification_main_column:2131230835
+ id:notification_main_column_container:2131230836
+ id:parentPanel:2131230840
+ id:progress_circular:2131230842
+ id:progress_horizontal:2131230843
+ id:right:2131230847
+ id:right_icon:2131230848
+ id:right_side:2131230849
+ id:scrollIndicatorDown:2131230851
+ id:scrollIndicatorUp:2131230852
+ id:scrollView:2131230853
+ id:search_badge:2131230854
+ id:search_bar:2131230855
+ id:search_button:2131230856
+ id:search_close_btn:2131230857
+ id:search_edit_frame:2131230858
+ id:search_go_btn:2131230859
+ id:search_mag_icon:2131230860
+ id:search_plate:2131230861
+ id:search_src_text:2131230862
+ id:search_voice_btn:2131230863
+ id:set_sre_button:2131230865
+ id:shortcut:2131230866
+ id:spacer:2131230870
+ id:split_action_bar:2131230871
+ id:standard:2131230877
+ id:start:2131230878
+ id:submenuarrow:2131230879
+ id:submit_area:2131230880
+ id:tag_transition_group:2131230883
+ id:tag_unhandled_key_event_manager:2131230884
+ id:tag_unhandled_key_listeners:2131230885
+ id:target_ttv:2131230886
+ id:text:2131230887
+ id:text2:2131230888
+ id:textSpacerNoButtons:2131230889
+ id:textSpacerNoTitle:2131230890
+ id:textView:2131230891
+ id:textView2:2131230892
+ id:text_connection_status:2131230893
+ id:text_model_available:2131230894
+ id:text_product_info:2131230895
+ id:textview_ip_addr:2131230896
+ id:textview_simulator:2131230897
+ id:time:2131230898
+ id:title:2131230899
+ id:titleDividerNoCustom:2131230900
+ id:title_template:2131230901
+ id:title_tv:2131230902
+ id:top:2131230903
+ id:topPanel:2131230904
+ id:up:2131230906
+ id:withText:2131230909
  integer:status_bar_notification_info_maxnum:2131296260
  layout:abc_action_bar_title_item:2131361792
  layout:abc_action_bar_up_container:2131361793
