@@ -131,8 +131,10 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
     private Bitmap mBitmap;
     private byte[] ip_address;
     private  String port="8888";
-    int thermal_visual=0;
+    private byte[] port_address=port.getBytes(StandardCharsets.UTF_8);
+    private int thermal_visual=0;
     private Button thermalVisualButton;
+    private int speedImages=10;
 
 
     @Override
@@ -409,7 +411,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                 }
             }
         });
-        //Enable/disable of virtual control mode
+
         screenShot.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -420,7 +422,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                     showToast("Start Streaming Success");
                 } else {
                     videostreamPreviewTtView.setVisibility(View.VISIBLE);
-                    videostreamPreviewSf.setVisibility(View.VISIBLE);
+                    videostreamPreviewSf.setVisibility(View.INVISIBLE);
                     showToast("Stop Streaming Success");
                 }
             }
@@ -675,7 +677,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
         //In this demo, we test the YUV data by saving it into JPG files.
         //DJILog.d(TAG, "onYuvDataReceived " + dataSize);
 
-        if (count++ % 10 == 0 && yuvFrame != null) {
+        if (count++ % speedImages == 0 && yuvFrame != null) {
             final byte[] bytes = new byte[dataSize];
             yuvFrame.get(bytes);
             //DJILog.d(TAG, "onYuvDataReceived2 " + dataSize);
@@ -708,7 +710,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
     private void change_display() {
 
-        if(thermal_visual==1){
+        if(thermal_visual==2){
             mCameras.get(1).setDisplayMode(SettingsDefinitions.DisplayMode.VISUAL_ONLY,new CommonCallbacks.CompletionCallback() {
                 @Override
                 public void onResult(DJIError djiError) {
@@ -717,9 +719,10 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                     }
                 }
             });
+            speedImages=10;
             thermal_visual=0;
         }
-        else{
+        else if(thermal_visual==0){
             mCameras.get(1).setDisplayMode(SettingsDefinitions.DisplayMode.THERMAL_ONLY,new CommonCallbacks.CompletionCallback() {
                 @Override
                 public void onResult(DJIError djiError) {
@@ -728,7 +731,20 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                     }
                 }
             });
+            speedImages=5;
             thermal_visual=1;
+        }
+        else {
+            mCameras.get(1).setDisplayMode(SettingsDefinitions.DisplayMode.MSX,new CommonCallbacks.CompletionCallback() {
+                @Override
+                public void onResult(DJIError djiError) {
+                    if (djiError != null) {
+                        showToast("can't change Display mode in thermal, error:" + djiError.getDescription());
+                    }
+                }
+            });
+            speedImages=3;
+            thermal_visual=2;
         }
     }
 
@@ -843,13 +859,9 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
             Bitmap bitmap = getScaledImage(bmp, width, height, 1);
 
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 75, bos);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 50, bos);
 
             //UDP limit is 64kb
-            if(bos.size()>60000){
-                bos.reset();
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 50, bos);
-            }
             if(bos.size()>60000){
                 bos.reset();
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 25, bos);
@@ -861,7 +873,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
             byte[] byteArray = bos.toByteArray();
             SocketClient socketClient = new SocketClient();
-            socketClient.execute(byteArray, ip_address,port.getBytes(StandardCharsets.UTF_8));
+            socketClient.execute(byteArray, ip_address,port_address);
 
             byteArrayOutputStream.flush();
             byteArrayOutputStream.close();

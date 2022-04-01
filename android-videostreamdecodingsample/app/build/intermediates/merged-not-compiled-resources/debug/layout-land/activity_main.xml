@@ -188,6 +188,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="600dp"
         android:layout_marginBottom="26dp"
-        android:text="Visual/Thermal" />
+        android:text="Mode" />
 
 </RelativeLayout>
