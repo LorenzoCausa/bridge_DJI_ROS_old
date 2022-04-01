@@ -66,6 +66,7 @@ import dji.sdk.flightcontroller.FlightController;
 import dji.sdk.products.Aircraft;
 import dji.sdk.sdkmanager.DJISDKManager;
 import dji.thirdparty.afinal.core.AsyncTask;
+import dji.common.flightcontroller.FlightControllerState;
 
 public class MainActivity extends Activity implements DJICodecManager.YuvDataCallback {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -135,6 +136,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
     private int thermal_visual=0;
     private Button thermalVisualButton;
     private int speedImages=10;
+    private FlightControllerState mFlightControllerState;
 
 
     @Override
@@ -201,6 +203,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
         // Thread per gestire i msg del socket
         Thread myThread = new Thread(new MyServerThread());
+        ClientThread sendMsg = new ClientThread(ip_address,"8081");
 
         if (isM300Product()) {
             OcuSyncLink ocuSyncLink = VideoDecodingApplication.getProductInstance().getAirLink().getOcuSyncLink();
@@ -218,6 +221,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
         }
 
         myThread.start();
+        sendMsg.start();
     }
 
     public static boolean isM300Product() {
@@ -323,6 +327,8 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
             @Override
             public void onClick(View view) {
                 change_display();
+                //mFlightControllerState=mFlightController.getState();
+                //showToast("altitude: "+String.valueOf(mFlightControllerState.getUltrasonicHeightInMeters()));
             }
         });
 
@@ -677,9 +683,10 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
         //In this demo, we test the YUV data by saving it into JPG files.
         //DJILog.d(TAG, "onYuvDataReceived " + dataSize);
 
-        if (count++ % speedImages == 0 && yuvFrame != null) {
+        if (count++ % 1 == 0 && yuvFrame != null) {
             final byte[] bytes = new byte[dataSize];
             yuvFrame.get(bytes);
+
             //DJILog.d(TAG, "onYuvDataReceived2 " + dataSize);
             AsyncTask.execute(new Runnable() {
                 @Override
@@ -900,41 +907,6 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
         return scaledBmp;
     }
 
-    /**
-     * Save the buffered data into a JPG image file
-     */
-    private void screenShot123(byte[] buf, String shotDir, int width, int height) {
-
-        YuvImage yuvImage = new YuvImage(buf,
-                ImageFormat.NV21,
-                width,
-                height,
-                null);
-        try {
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-
-            Rect rect = new Rect(0, 0, width, height);
-
-            yuvImage.compressToJpeg(rect, 15, byteArrayOutputStream);
-            byte[] bmp = byteArrayOutputStream.toByteArray();
-
-            SocketClient socketClient = new SocketClient();
-            socketClient.execute(bmp, ip_address);
-
-
-            byteArrayOutputStream.flush();
-            byteArrayOutputStream.close();
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
-
-
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-            }
-        });
-    }
 
     private void handleYUVClick() {
         if (screenShot.isSelected()) {
@@ -1095,37 +1067,44 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
             return Math.sqrt(Math.pow(targX, 2) + Math.pow(targY, 2));
         }
 
-        /*
-        public void reachTarget(float targX, float targY) {
-            float dist = (float) distanceFromTargetPos(targX, targY);
-            float off_x = x + targX;
-            float off_y = y + targY;
-            while (dist > 0.3) {
 
-                euclideanDistance = distanceFromTargetPos(off_x - x, off_y - y);
-                mPitch = (float) ((off_y - y) / euclideanDistance);
-                mRoll = (float) ((off_x - x) / euclideanDistance);
-                //mYaw = 15 * computeAnguarVelocity(off_x - x, off_y - y);
-                mYaw = 0;
-                mThrottle = 0;
+    }
 
-                if (mFlightController != null) {
-                    // metodo che manda le variabili globali (Salvate nell'oggetto FlightControlData) al mFlightController
-                    mFlightController.sendVirtualStickFlightControlData(
-                            new FlightControlData( // oggetto descritto da queste tre variabili
-                                    mPitch, mRoll, mYaw, mThrottle
-                            ), new CommonCallbacks.CompletionCallback() {
-                                @Override
-                                public void onResult(DJIError djiError) {
+    private class ClientThread extends Thread{
+        byte[] ipByte;
+        String portThread;
 
-                                }
-                            }
-                    );
+        ClientThread(byte[] ipByte, String portThread) {
+            this.ipByte = ipByte;
+            this.portThread = portThread;
+        }
+
+        public void run() {
+            while(mFlightController==null){
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                dist = (float) distanceFromTargetPos(off_x - x, off_y - y);
             }
 
+            while (true) {
+                SocketClient ThreadClient = new SocketClient();
+                mFlightControllerState = mFlightController.getState();
+                float altitude = mFlightControllerState.getUltrasonicHeightInMeters();
+                byte[] byteArray = float2ByteArray(altitude);
+                byte[] portByte = portThread.getBytes(StandardCharsets.UTF_8);
+                ThreadClient.execute(byteArray, ipByte, portByte);
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
-        */
+
+        private byte[] float2ByteArray(float value) {
+            return ByteBuffer.allocate(4).putFloat(value).array();
+        }
     }
 }
