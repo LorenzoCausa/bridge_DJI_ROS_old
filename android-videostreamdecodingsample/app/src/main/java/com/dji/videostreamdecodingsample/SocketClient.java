@@ -1,6 +1,7 @@
 package com.dji.videostreamdecodingsample;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -9,43 +10,44 @@ import java.io.PrintWriter;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.Socket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 
-public class SocketClient extends AsyncTask<byte[], Void, Void> {
-    @Override
-    protected Void doInBackground(byte[]... voids) {
-        byte[] buf = voids[0];
-        byte[] ip = voids[1];
-        byte[] port = voids[2];
+public class SocketClient {
+    int port;
+    DatagramSocket socket;
+    InetAddress address;
 
-        DatagramSocket socket;
-        InetAddress address;
-        String ip_address = new String(ip, StandardCharsets.UTF_8); // for UTF-8 encoding
-        String portStr = new String(port, StandardCharsets.UTF_8); // for UTF-8 encoding
-        Integer my_port = Integer.valueOf(portStr);
-
+    //Constructor Declaration of Class
+    public SocketClient(String ip, int port) {
+        DatagramSocket Asocket;
+        InetAddress Aaddress;
         try {
-            socket = new DatagramSocket();
+            Asocket = new DatagramSocket();
         } catch (SocketException e) {
             e.printStackTrace();
-            socket = null;
+            Asocket = null;
         }
         try {
-            address = InetAddress.getByName(ip_address);
+            Aaddress = InetAddress.getByName(ip);
         } catch (UnknownHostException e) {
             e.printStackTrace();
-            address = null;
+            Aaddress = null;
         }
-        DatagramPacket packet = new DatagramPacket(buf, buf.length, address, my_port);
+
+        this.port = port;
+        this.address=Aaddress;
+        this.socket=Asocket;
+    }
+    public void execute(byte[] buf){
+        DatagramPacket packet = new DatagramPacket(buf, buf.length, address, port);
         try {
             socket.send(packet);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return null;
     }
+
 }

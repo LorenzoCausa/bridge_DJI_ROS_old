@@ -1900,7 +1900,6 @@ Skein
 freeze
 $TLS12withSHA512
 RSA/PKCS1
-8888
 drawable
 ACTION_NEXT_HTML_ELEMENT
 SHA224WITHECDDSA
@@ -2138,7 +2137,6 @@ FrameMetrics
 ISIZE
 MD5WITHRSAENCRYPTION
 appcompat_skip_skip
-8081
 CertPathReviewer.QcStatementExtError
 BEGIN_ARRAY
 Alg.Alias.AlgorithmParameters.SHA224w...

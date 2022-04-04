@@ -42,6 +42,7 @@ import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import dji.common.airlink.PhysicalSource;
@@ -130,13 +131,14 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
     private int videoViewHeight;
     private int count;
     private Bitmap mBitmap;
-    private byte[] ip_address;
-    private  String port="8888";
-    private byte[] port_address=port.getBytes(StandardCharsets.UTF_8);
+    private String ip_address;
     private int thermal_visual=0;
     private Button thermalVisualButton;
-    private int speedImages=10;
     private FlightControllerState mFlightControllerState;
+    private byte[] byteArrayImage;
+    private LinkedList imagesList = new LinkedList();
+    private int linkedListSize=0;
+    private int qualityImage=10;
 
 
     @Override
@@ -199,11 +201,14 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
         setContentView(R.layout.activity_main);
         initUi();
         Intent intent = getIntent();
-        ip_address = intent.getByteArrayExtra("ip_address");
+        byte[] ipByte = intent.getByteArrayExtra("ip_address");
+        ip_address=new String(ipByte);
+        Log.d("MY TAG",ip_address);
 
         // Thread per gestire i msg del socket
         Thread myThread = new Thread(new MyServerThread());
-        ClientThread sendMsg = new ClientThread(ip_address,"8081");
+        ClientThread sendMsg = new ClientThread(ip_address,8081);
+        SendImgThread sendImg = new SendImgThread(ip_address,8888);
 
         if (isM300Product()) {
             OcuSyncLink ocuSyncLink = VideoDecodingApplication.getProductInstance().getAirLink().getOcuSyncLink();
@@ -222,6 +227,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
         myThread.start();
         sendMsg.start();
+        sendImg.start();
     }
 
     public static boolean isM300Product() {
@@ -683,7 +689,8 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
         //In this demo, we test the YUV data by saving it into JPG files.
         //DJILog.d(TAG, "onYuvDataReceived " + dataSize);
 
-        if (count++ % 1 == 0 && yuvFrame != null) {
+        if (count++ % 1 == 0 && yuvFrame != null & linkedListSize<5) {
+            linkedListSize=linkedListSize+1;
             final byte[] bytes = new byte[dataSize];
             yuvFrame.get(bytes);
 
@@ -726,7 +733,6 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                     }
                 }
             });
-            speedImages=10;
             thermal_visual=0;
         }
         else if(thermal_visual==0){
@@ -738,7 +744,6 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                     }
                 }
             });
-            speedImages=5;
             thermal_visual=1;
         }
         else {
@@ -750,7 +755,6 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                     }
                 }
             });
-            speedImages=3;
             thermal_visual=2;
         }
     }
@@ -856,47 +860,47 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                 width,
                 height,
                 null);
+
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        Rect rect = new Rect(0, 0, width, height);
+        yuvImage.compressToJpeg(rect, 100, byteArrayOutputStream);
+        byte[] bmp = byteArrayOutputStream.toByteArray();
+
+        // convert to Bitmap and scale the image
+        Bitmap bitmap = getScaledImage(bmp, width, height, 1);
+
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, qualityImage, bos);
+
+        //UDP limit is 64kb
+        if(bos.size()>62000){
+            if(qualityImage>0) {
+                qualityImage = qualityImage - 5;
+                linkedListSize=linkedListSize-1;
+            }
+        }
+        else {
+            byteArrayImage = bos.toByteArray();
+            imagesList.addLast(byteArrayImage);
+
+            if(bos.size()<50000){
+                if(qualityImage<100){
+                    qualityImage=qualityImage+5;
+                }
+            }
+        }
+        bos.reset();
+        Log.d("MY TAG","qualityImage: "+qualityImage);
+        Log.d("MY TAG","list size: "+linkedListSize+"actual size: "+imagesList.size());
+
         try {
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            Rect rect = new Rect(0, 0, width, height);
-            yuvImage.compressToJpeg(rect, 100, byteArrayOutputStream);
-            byte[] bmp = byteArrayOutputStream.toByteArray();
-
-            // convert to Bitmap and scale the image
-            Bitmap bitmap = getScaledImage(bmp, width, height, 1);
-
-            ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 50, bos);
-
-            //UDP limit is 64kb
-            if(bos.size()>60000){
-                bos.reset();
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 25, bos);
-            }
-            if(bos.size()>60000){
-                bos.reset();
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 10, bos);
-            }
-
-            byte[] byteArray = bos.toByteArray();
-            SocketClient socketClient = new SocketClient();
-            socketClient.execute(byteArray, ip_address,port_address);
-
             byteArrayOutputStream.flush();
             byteArrayOutputStream.close();
             bos.flush();
             bos.close();
-            //change_display();
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
-
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-            }
-        });
     }
 
     public static Bitmap getScaledImage(byte[] data, int width, int height, int scalingFactor) {
@@ -1044,7 +1048,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
         //y is the horizontal side axis
         //x is the frontal axis
-        public float computeAnguarVelocity(float x, float y) {
+        public float computeAngularVelocity(float x, float y) {
             return (float) (((Math.PI / 2) - Math.atan2(targetX, targetY)) / Math.PI);
         }
 
@@ -1071,11 +1075,11 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
     }
 
     private class ClientThread extends Thread{
-        byte[] ipByte;
-        String portThread;
+        String ip;
+        int portThread;
 
-        ClientThread(byte[] ipByte, String portThread) {
-            this.ipByte = ipByte;
+        ClientThread(String ip, int portThread) {
+            this.ip = ip;
             this.portThread = portThread;
         }
 
@@ -1088,17 +1092,61 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                 }
             }
 
+            SocketClient ThreadClient = new SocketClient(this.ip,this.portThread);
             while (true) {
-                SocketClient ThreadClient = new SocketClient();
+
                 mFlightControllerState = mFlightController.getState();
                 float altitude = mFlightControllerState.getUltrasonicHeightInMeters();
                 byte[] byteArray = float2ByteArray(altitude);
-                byte[] portByte = portThread.getBytes(StandardCharsets.UTF_8);
-                ThreadClient.execute(byteArray, ipByte, portByte);
+
+                ThreadClient.execute(byteArray);
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                }
+            }
+        }
+
+        private byte[] float2ByteArray(float value) {
+            return ByteBuffer.allocate(4).putFloat(value).array();
+        }
+    }
+
+    private class SendImgThread extends Thread{
+        String ip;
+        int portThread;
+
+        SendImgThread(String ip, int portThread) {
+            this.ip = ip;
+            this.portThread = portThread;
+        }
+
+        public void run() {
+            SocketClient client = new SocketClient(ip,portThread);
+
+            while(mFlightController==null){
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            while (true) {
+                if(imagesList.size()!=0 & videostreamPreviewTtView.getVisibility()!= View.VISIBLE) {
+
+                    byte[] img= (byte[]) imagesList.getFirst();
+                    client.execute(img);
+                    linkedListSize=linkedListSize-1;
+                    imagesList.remove();
+                }
+                else{
+                    try {
+                        Thread.sleep(5);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }

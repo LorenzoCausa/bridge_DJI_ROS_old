@@ -24,15 +24,15 @@
 
     <TextureView
         android:id="@+id/livestream_preview_ttv"
-        android:layout_width="451dp"
-        android:layout_height="244dp"
+        android:layout_width="750dp"
+        android:layout_height="450dp"
         android:layout_below="@id/main_title_rl"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:layout_gravity="center"
         android:layout_marginStart="61dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="38dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="74dp"
         android:alpha="50"
         android:visibility="visible" />
 
@@ -82,7 +82,6 @@
             android:visibility="gone" />
 
     </LinearLayout>
-
 
 
     <TextView
@@ -163,6 +162,17 @@
             android:textOff="VCM Enable"
             android:textOn="VCM Disable" />
 
+        <Button
+            android:id="@+id/mythermalVisualButton"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/activity_main_screen_shot"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_btn"
+            android:text="Mode"
+
+            android:textColor="@color/colorWhite" />
+
     </RelativeLayout>
 
     <TextView
@@ -174,20 +184,11 @@
 
 
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="209dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="747dp"
         android:layout_marginRight="300dp"
         android:layout_marginBottom="673dp"
         android:text="TextView" />
 
-    <Button
-        android:id="@+id/mythermalVisualButton"
-        android:layout_width="77dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="600dp"
-        android:layout_marginBottom="26dp"
-        android:text="Mode" />
 
 </RelativeLayout>
