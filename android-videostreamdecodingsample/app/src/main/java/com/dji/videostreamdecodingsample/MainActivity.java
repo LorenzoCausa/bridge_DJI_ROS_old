@@ -861,23 +861,25 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                 height,
                 null);
 
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
         Rect rect = new Rect(0, 0, width, height);
-        yuvImage.compressToJpeg(rect, 100, byteArrayOutputStream);
+        yuvImage.compressToJpeg(rect, qualityImage, bos);
+        /*
         byte[] bmp = byteArrayOutputStream.toByteArray();
 
         // convert to Bitmap and scale the image
         Bitmap bitmap = getScaledImage(bmp, width, height, 1);
 
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, qualityImage, bos);
-
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 50, bos);
+         */
         //UDP limit is 64kb
+
         if(bos.size()>62000){
-            if(qualityImage>0) {
-                qualityImage = qualityImage - 5;
-                linkedListSize=linkedListSize-1;
+            if(qualityImage>11) {
+                qualityImage = qualityImage - 10;
             }
+            linkedListSize=linkedListSize-1;
         }
         else {
             byteArrayImage = bos.toByteArray();
@@ -885,17 +887,27 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
             if(bos.size()<50000){
                 if(qualityImage<100){
-                    qualityImage=qualityImage+5;
+                    qualityImage=qualityImage+1;
+                }
+            }
+            if(bos.size()>51000){
+                if(qualityImage>11){
+                    qualityImage=qualityImage-1;
                 }
             }
         }
-        bos.reset();
+
+        //byteArrayImage = bos.toByteArray();
+        //imagesList.addLast(byteArrayImage);
+
         Log.d("MY TAG","qualityImage: "+qualityImage);
-        Log.d("MY TAG","list size: "+linkedListSize+"actual size: "+imagesList.size());
+        Log.d("MY TAG","list size: "+linkedListSize+" actual size: "+imagesList.size());
+        Log.d("MY TAG","bos size: "+bos.size());
+        bos.reset();
 
         try {
-            byteArrayOutputStream.flush();
-            byteArrayOutputStream.close();
+           // byteArrayOutputStream.flush();
+           // byteArrayOutputStream.close();
             bos.flush();
             bos.close();
         } catch (IOException e) {
@@ -1138,8 +1150,8 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
 
                     byte[] img= (byte[]) imagesList.getFirst();
                     client.execute(img);
-                    linkedListSize=linkedListSize-1;
                     imagesList.remove();
+                    linkedListSize=linkedListSize-1;
                 }
                 else{
                     try {

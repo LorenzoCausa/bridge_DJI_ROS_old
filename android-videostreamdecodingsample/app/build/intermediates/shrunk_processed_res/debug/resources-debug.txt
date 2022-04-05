@@ -50,7 +50,6 @@ Marking raw:iframe_1280x720_3s:2131558411 reachable: referenced from /home/loren
 Marking raw:iframe_896x480:2131558440 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking raw:iframe_848x480:2131558439 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking raw:iframe_640x480:2131558435 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
-Marking mipmap:joystick:2131492867 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:text_connection_status:2131230893 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:text_model_available:2131230894 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
 Marking id:text_product_info:2131230895 reachable: referenced from /home/lorenzocausa/Desktop/bridge_DJI_ROS/android-videostreamdecodingsample/app/build/intermediates/dex/debug/minifyDebugWithR8/classes.dex
@@ -5768,7 +5767,7 @@ Marking attr:queryHint:2130903293 used because it matches string pool constant q
 @mipmap/ic_launcher : reachable=false
 @mipmap/ic_launcher_ls : reachable=false
 @mipmap/ic_launcher_round : reachable=false
-@mipmap/joystick : reachable=true
+@mipmap/joystick : reachable=false
 @mipmap/joystick_bg : reachable=false
 @raw/arrow_v02 : reachable=true
 @raw/dji1080gdriframe : reachable=true
@@ -8996,7 +8995,6 @@ The root reachable resources are:
  layout:zxing_barcode_scanner:2131361834
  layout:zxing_capture:2131361835
  menu:menu_region_item:2131427328
- mipmap:joystick:2131492867
  raw:arrow_v02:2131558400
  raw:dji1080gdriframe:2131558401
  raw:dock:2131558402
@@ -9179,4 +9177,5 @@ Skipped unused resource res/mipmap-xxhdpi-v4/ic_launcher_round.png: 10056 bytes 
 Skipped unused resource res/mipmap-xxxhdpi-v4/ic_launcher.png: 10486 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/mipmap-xxxhdpi-v4/ic_launcher_ls.png: 10486 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/mipmap-xxxhdpi-v4/ic_launcher_round.png: 14696 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xxxhdpi-v4/joystick.png: 9261 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/mipmap-xxxhdpi-v4/joystick_bg.png: 3945 bytes (replaced with small dummy file of size 67 bytes)
