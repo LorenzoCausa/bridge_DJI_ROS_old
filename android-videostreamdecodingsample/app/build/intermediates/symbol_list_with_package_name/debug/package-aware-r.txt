@@ -780,6 +780,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btnMotors
 id btn_land
 id btn_open
 id btn_set_andr_bridge

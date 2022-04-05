@@ -170,8 +170,21 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/round_btn"
             android:text="Mode"
-
             android:textColor="@color/colorWhite" />
+
+        <ToggleButton
+            android:id="@+id/btnMotors"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/mythermalVisualButton"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_btn"
+            android:text="Turn motors On"
+            android:textColor="@color/colorWhite"
+            android:textOff="Turn motors On"
+            android:textOn="Turn motors Off" />
+
+
 
     </RelativeLayout>
 

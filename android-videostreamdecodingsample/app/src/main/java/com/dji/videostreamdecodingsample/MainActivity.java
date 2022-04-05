@@ -139,6 +139,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
     private LinkedList imagesList = new LinkedList();
     private int linkedListSize=0;
     private int qualityImage=10;
+    private ToggleButton mMotorsButton;
 
 
     @Override
@@ -302,6 +303,7 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
         mSwtcEnableVirtualStick = (ToggleButton) findViewById(R.id.swtc_enable_virtual_stick); //enable/disable Virtual Control Mode
         target_tv = (TextView) findViewById(R.id.target_ttv);
         thermalVisualButton=(Button) findViewById(R.id.mythermalVisualButton);
+        mMotorsButton = (ToggleButton) findViewById(R.id.btnMotors);
 
         //savePath = (TextView) findViewById(R.id.activity_main_save_path);
         screenShot = (ToggleButton) findViewById(R.id.activity_main_screen_shot);
@@ -333,8 +335,6 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
             @Override
             public void onClick(View view) {
                 change_display();
-                //mFlightControllerState=mFlightController.getState();
-                //showToast("altitude: "+String.valueOf(mFlightControllerState.getUltrasonicHeightInMeters()));
             }
         });
 
@@ -420,6 +420,35 @@ public class MainActivity extends Activity implements DJICodecManager.YuvDataCal
                                       }
                                 );
                     }
+                }
+            }
+        });
+
+        mMotorsButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    mFlightController.turnOnMotors(new CommonCallbacks.CompletionCallback() {
+                        @Override
+                        public void onResult(DJIError djiError) {
+                            if (djiError != null) {
+                                showToast(djiError.getDescription());
+                            } else {
+                                showToast("Motors On");
+                            }
+                        }
+                    });
+                } else {
+                    mFlightController.turnOffMotors(new CommonCallbacks.CompletionCallback() {
+                        @Override
+                        public void onResult(DJIError djiError) {
+                            if (djiError != null) {
+                                showToast(djiError.getDescription());
+                            } else {
+                                showToast("Motors Off");
+                            }
+                        }
+                    });
                 }
             }
         });
